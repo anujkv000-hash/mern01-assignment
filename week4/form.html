@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    <style>
+        fieldset {
+            width: fit-content;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,6 +33,61 @@
         <!-- Password -->
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
+
+        <br><br>
+
+        <!-- Date -->
+        <label for="date">Date of Birth:</label>
+        <input type="date" id="date" name="date" required>
+
+        <br><br>
+
+        <!-- Phone -->
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <br><br>
+
+        <!-- Radio Buttons -->
+        <fieldset>
+            <legend>Preferred Contact Method:</legend>
+            <input type="radio" id="contact-email" name="contact-method" value="email" required>
+            <label for="contact-email">Email</label>
+            <input type="radio" id="contact-phone" name="contact-method" value="phone">
+            <label for="contact-phone">Phone</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Checkboxes -->
+        <fieldset>
+            <legend>Interests:</legend>
+            <input type="checkbox" id="interest-sports" name="interests" value="sports">
+            <label for="interest-sports">Sports</label>
+            <input type="checkbox" id="interest-music" name="interests" value="music">
+            <label for="interest-music">Music</label>
+            <input type="checkbox" id="interest-technology" name="interests" value="technology">
+            <label for="interest-technology">Technology</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Dropdown -->
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select a country</option>
+            <option value="india">India</option>
+            <option value="united-states">United States</option>
+            <option value="united-kingdom">United Kingdom</option>
+            <option value="other">Other</option>
+        </select>
+
+        <br><br>
+
+        <!-- Message -->
+        <label for="message">Message:</label>
+        <br>
+        <textarea id="message" name="message" rows="5" cols="40"></textarea>
 
         <br><br>
 
