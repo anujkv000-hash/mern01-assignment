@@ -9,6 +9,16 @@
         fieldset {
             width: fit-content;
         }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
     </style>
 </head>
 
@@ -95,6 +105,41 @@
         <button type="submit">Submit</button>
 
     </form>
+
+    <h2>Events</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Event</th>
+                <th scope="col">Date</th>
+                <th scope="col">Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Annual Conference</td>
+                <td>June 15, 2026</td>
+                <td>New Delhi</td>
+            </tr>
+            <tr>
+                <td>Web Development Workshop</td>
+                <td>July 20, 2026</td>
+                <td>Mumbai</td>
+            </tr>
+            <tr>
+                <td>Community Meetup</td>
+                <td>August 10, 2026</td>
+                <td>Bengaluru</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row" colspan="2">Total events</th>
+                <td>3</td>
+            </tr>
+        </tfoot>
+    </table>
 
 </body>
 
