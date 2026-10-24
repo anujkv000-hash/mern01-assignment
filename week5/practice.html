@@ -11,6 +11,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --color-page: #eef2ff;
+            --color-text: #172554;
+            --color-surface: #ffffff;
+            --color-primary: #315bea;
+            --color-input-border: #888888;
+            --color-border: #cbd5e1;
+            --color-shadow: #17255414;
+            --spacing-xs: 8px;
+            --spacing-input: 6px;
+            --spacing-sm: 16px;
+            --spacing-md: 20px;
+            --spacing-lg: 40px;
+            --spacing-xl: 48px;
+            --spacing-button-inline: 18px;
+            --spacing-shadow-y: 2px;
+            --spacing-shadow-blur: 8px;
+            --form-label-width: 54px;
+            --form-input-max-width: 220px;
+            --radius-card: 12px;
+            --radius-input: 2px;
+            --radius-button: 6px;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -22,35 +46,35 @@
             min-height: 100vh;
             max-width: 860px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #eef2ff;
-            color: #172554;
+            padding: var(--spacing-md);
+            background-color: var(--color-page);
+            color: var(--color-text);
         }
 
         h1 {
-            margin-bottom: 8px;
+            margin-bottom: var(--spacing-xs);
             font-size: 2.5rem;
             line-height: 1.2;
         }
 
         .card {
-            margin-top: 20px;
-            padding: 20px;
-            border-radius: 12px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 8px #17255414;
+            margin-top: var(--spacing-md);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-card);
+            background-color: var(--color-surface);
+            box-shadow: 0 var(--spacing-shadow-y) var(--spacing-shadow-blur) var(--color-shadow);
         }
 
         #hero {
-            padding: 48px 20px;
-            border-radius: 12px;
-            background-color: #315bea;
-            color: #ffffff;
+            padding: var(--spacing-xl) var(--spacing-md);
+            border-radius: var(--radius-card);
+            background-color: var(--color-primary);
+            color: var(--color-surface);
             text-align: center;
         }
 
         h2 {
-            margin-bottom: 16px;
+            margin-bottom: var(--spacing-sm);
             font-size: 1.65rem;
         }
 
@@ -62,56 +86,56 @@
 
         th,
         td {
-            padding: 8px;
+            padding: var(--spacing-xs);
         }
 
         th {
-            background-color: #315bea;
-            color: #ffffff;
+            background-color: var(--color-primary);
+            color: var(--color-surface);
         }
 
         td {
-            border-bottom: 1px solid #cbd5e1;
+            border-bottom: 1px solid var(--color-border);
         }
 
         .form-row {
             display: grid;
-            grid-template-columns: 54px minmax(0, 220px);
+            grid-template-columns: var(--form-label-width) minmax(0, var(--form-input-max-width));
             align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
+            gap: var(--spacing-xs);
+            margin-bottom: var(--spacing-xs);
         }
 
         input {
             width: 100%;
             min-width: 0;
-            padding: 6px;
-            border: 1px solid #888888;
-            border-radius: 2px;
+            padding: var(--spacing-input);
+            border: 1px solid var(--color-input-border);
+            border-radius: var(--radius-input);
             font: inherit;
         }
 
         button {
-            padding: 8px 18px;
+            padding: var(--spacing-xs) var(--spacing-button-inline);
             border: 0;
-            border-radius: 6px;
-            background-color: #315bea;
-            color: #ffffff;
+            border-radius: var(--radius-button);
+            background-color: var(--color-primary);
+            color: var(--color-surface);
             font: inherit;
             cursor: pointer;
         }
 
         @media (max-width: 480px) {
             body {
-                padding: 16px;
+                padding: var(--spacing-sm);
             }
 
             #hero {
-                padding: 40px 16px;
+                padding: var(--spacing-lg) var(--spacing-sm);
             }
 
             .card {
-                padding: 16px;
+                padding: var(--spacing-sm);
             }
         }
     </style>
