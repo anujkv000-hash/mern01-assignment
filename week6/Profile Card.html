@@ -15,7 +15,7 @@
             background: #edf2f8;
         }
 
-        .top-bar {
+        .profile-page__header {
             position: sticky;
             top: 0;
             z-index: 10;
@@ -25,7 +25,7 @@
             text-align: center;
         }
 
-        .add-button {
+        .profile-page__add-button {
             position: fixed;
             right: 24px;
             bottom: 24px;
@@ -52,7 +52,7 @@
             text-align: center;
         }
 
-        .avatar {
+        .profile-card__avatar {
             width: 94px;
             height: 94px;
             margin: 0 auto 20px;
@@ -64,7 +64,7 @@
             font-size: 38px;
         }
 
-        .bio-box {
+        .profile-card__bio {
             height: 90px;
             padding: 10px;
             border: 1px solid #ccd3df;
@@ -75,15 +75,15 @@
 </head>
 
 <body>
-    <header class="top-bar">My Profile Page</header>
-    <button class="add-button" type="button" aria-label="Add">+</button>
+    <header class="profile-page__header">My Profile Page</header>
+    <button class="profile-page__add-button" type="button" aria-label="Add">+</button>
 
     <main>
         <section class="profile-card">
-            <div class="avatar">A</div>
+            <div class="profile-card__avatar">A</div>
             <h1>Anuj Kumar Verma</h1>
             <p>Web Developer in Making</p>
-            <div class="bio-box">
+            <div class="profile-card__bio">
                 Hi! I am anuj kumar verma. I started coding this year. I like making small websites,
                 drawing and listening to music. My goal is to build my own app.
             </div>
