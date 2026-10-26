@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>6.1 - Box Model</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #edf2f8;
+        }
+
+        .top-bar {
+            padding: 15px;
+            background: #14233f;
+            color: white;
+            text-align: center;
+        }
+
+        .profile-card {
+            width: 290px;
+            margin: 25px auto;
+            padding: 20px;
+            border: 2px solid #315efb;
+            background: white;
+            text-align: center;
+        }
+
+        .bio-box {
+            padding: 10px;
+            border: 1px solid #ccd3df;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top-bar">My Profile Page</header>
+
+    <main>
+        <section class="profile-card">
+            <h1>Anuj kumar verma</h1>
+            <p>Web Developer in Making</p>
+            <div class="bio-box">
+                Hi! I am Anuj kumar verma. I started coding this year. I like making small websites,
+                drawing and listening to music.
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
