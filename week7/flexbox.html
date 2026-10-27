@@ -19,11 +19,10 @@
             align-items: center;
             justify-content: space-between;
             padding: 16px 8%;
-            background-color: #f4f4f4;
         }
 
         .logo {
-            color: #222;
+            color: #17336b;
             font-size: 1.4rem;
             font-weight: bold;
             text-decoration: none;
@@ -41,7 +40,7 @@
         }
 
         .nav-links a {
-            color: #333;
+            color: #263b63;
             text-decoration: none;
         }
 
@@ -55,14 +54,17 @@
             font-size: 1rem;
         }
 
+        .landing-hero {
+            background: linear-gradient(135deg, #e8f0fe, #d5e4ff);
+        }
+
         .banner {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 60vh;
-            padding: 32px 16px;
-            background-color: #e8f0fe;
+            min-height: 52vh;
+            padding: 48px 16px 64px;
             text-align: center;
         }
 
@@ -108,10 +110,28 @@
                 gap: 10px;
             }
         }
+
+        @media (max-width: 420px) {
+            .navbar {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .navbar-right {
+                width: 100%;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
+    <header class="landing-hero">
         <nav class="navbar" aria-label="Main navigation">
             <a class="logo" href="#">Anuj kumar verma</a>
             <div class="navbar-right">
@@ -123,12 +143,12 @@
                 <button class="navbar-button" type="button">Sign up</button>
             </div>
         </nav>
-    </header>
-    <main>
         <section class="banner">
             <h1>Learn web development</h1>
             <p>Start from zero. Build real-world projects.</p>
         </section>
+    </header>
+    <main>
         <section class="card-row" aria-label="Featured courses">
             <article class="card">
                 <h2>HTML</h2>
