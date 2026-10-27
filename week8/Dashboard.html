@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Question 8.4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Final Dashboard</title>
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         * {
@@ -16,47 +17,67 @@
         body {
             background-color: #f0f4f9;
             padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         .dashboard-container {
             display: grid;
             grid-template-columns: 220px 1fr;
-            grid-template-rows: 140px 1fr auto;
-            grid-template-areas: "head head" "side main" "foot foot";
+            grid-template-rows: 140px 1fr 100px;
+            grid-template-areas:
+                "head head"
+                "side main"
+                "foot foot";
             gap: 20px;
+            width: 100%;
+            max-width: 1050px;
         }
 
         .header {
             grid-area: head;
             background-color: #111e38;
             color: white;
-            padding: 20px;
             border-radius: 8px;
-            font-size: 24px;
+            padding: 25px;
+            font-size: 26px;
+            font-weight: bold;
         }
 
         .sidebar {
             grid-area: side;
             background-color: #dbe4ff;
-            padding: 20px;
             border-radius: 8px;
+            padding: 25px 20px;
+        }
+
+        .sidebar h3 {
+            color: #111e38;
+            margin-bottom: 15px;
+            font-size: 18px;
         }
 
         .sidebar ul {
-            list-style: disc;
+            list-style-type: disc;
             padding-left: 20px;
-            margin-top: 10px;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 12px;
+            color: #222;
+            font-size: 16px;
         }
 
         .main-content {
             grid-area: main;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
             grid-auto-rows: min-content;
+            gap: 15px;
         }
 
-        /* 8.4: Inside each box use Flexbox to put icon and text side by side */
         .card {
             background: white;
             border-radius: 8px;
@@ -64,11 +85,13 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
 
         .card i {
             font-size: 32px;
+            width: 40px;
+            text-align: center;
         }
 
         .icon-user {
@@ -98,25 +121,29 @@
         .card-info {
             display: flex;
             flex-direction: column;
+            line-height: 1.2;
         }
 
         .card-value {
             font-weight: bold;
             font-size: 16px;
+            color: #111e38;
         }
 
         .card-label {
             font-size: 14px;
-            color: #555;
+            color: #444;
         }
 
         .footer {
             grid-area: foot;
             background-color: #111e38;
             color: white;
-            padding: 20px;
-            text-align: center;
             border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
         }
     </style>
 </head>
