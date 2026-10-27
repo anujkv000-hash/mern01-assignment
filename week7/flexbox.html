@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 8%;
+            background-color: #f4f4f4;
+        }
+
+        .logo {
+            color: #222;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .navbar-button {
+            padding: 10px 16px;
+            border: 0;
+            border-radius: 4px;
+            background-color: #2563eb;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 520px) {
+            .navbar {
+                padding: 16px;
+            }
+
+            .navbar-right {
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="logo" href="#">Anuj kumar verma</a>
+            <div class="navbar-right">
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">courses</a>
+                    <a href="#">Contact</a>
+                </div>
+                <button class="navbar-button" type="button">Sign up</button>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
