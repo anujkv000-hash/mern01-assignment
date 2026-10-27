@@ -16,7 +16,7 @@
             background-color: #f0f4f9;
             padding: 20px;
         }
-        
+
         .dashboard-container {
             display: grid;
             grid-template-columns: 220px 1fr;
@@ -38,9 +38,16 @@
         }
 
         .main-content {
-            background-color: #ffffff;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .card {
+            background: white;
             padding: 20px;
             border-radius: 8px;
+            border: 1px solid #ddd;
         }
 
         .footer {
@@ -66,7 +73,14 @@
                 <li>Settings</li>
             </ul>
         </div>
-        <div class="main-content">Main Area (Cards will come here)</div>
+        <div class="main-content">
+            <div class="card">Box 1</div>
+            <div class="card">Box 2</div>
+            <div class="card">Box 3</div>
+            <div class="card">Box 4</div>
+            <div class="card">Box 5</div>
+            <div class="card">Box 6</div>
+        </div>
         <div class="footer">Made with CSS Grid</div>
     </div>
 </body>
