@@ -28,7 +28,8 @@
             grid-template-areas:
                 "navbar"
                 "hero"
-                "features";
+                "features"
+                "footer";
             width: 100%;
             margin: 0 auto;
         }
@@ -88,7 +89,7 @@
             font-size: 0.85rem;
         }
 
-        .hero-image {
+        .hero img {
             grid-area: image;
             display: block;
             width: 100%;
@@ -105,6 +106,19 @@
             gap: 0.6rem;
             padding: 0.75rem;
             background-color: white;
+        }
+
+        .footer {
+            grid-area: footer;
+            padding: 1rem 0.75rem;
+            background-color: #10203d;
+            color: white;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 0.9rem;
         }
 
         .feature {
@@ -127,7 +141,7 @@
         /* Tablet: 768px se */
         @media (min-width: 768px) {
             .page {
-                max-width: 42rem;
+                max-width: 56rem;
             }
 
             .navbar {
@@ -148,11 +162,12 @@
         /* Desktop: 1024px se */
         @media (min-width: 1024px) {
             .page {
-                max-width: 62rem;
+                max-width: 72rem;
                 grid-template-areas:
                     "navbar"
                     "hero"
-                    "features";
+                    "features"
+                    "footer";
             }
 
             .hero {
@@ -169,10 +184,10 @@
             .hero h1 {
                 max-width: none;
                 margin: 0 0 0.25rem;
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
-            .hero-image {
+            .hero img {
                 width: 100%;
                 margin: 0 auto;
             }
@@ -186,7 +201,7 @@
 
 <body>
     <main class="page">
-        <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
             <h2 class="logo">WanderGo</h2>
 
             <div class="nav-links">
@@ -199,8 +214,9 @@
         <section class="hero" id="home">
             <h1>Plan your next trip in minutes</h1>
             <p>Simple, cheap and fun travel plans.</p>
-            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
-    alt="Pahadon mein safar">
+            <img class="hero-image"
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+                alt="Mountain landscape">
         </section>
 
         <section class="features" id="trips">
@@ -219,6 +235,10 @@
                 <p>We are here for you.</p>
             </article>
         </section>
+
+    <footer class="footer" id="contact">
+        <p>Have a question? Get in touch with the WanderGo team.</p>
+    </footer>
     </main>
 </body>
 
