@@ -23,12 +23,19 @@
         }
 
         .page {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            grid-template-areas:
+                "navbar"
+                "hero"
+                "features";
             width: 100%;
             margin: 0 auto;
         }
 
         /* Navbar: Flexbox */
         .navbar {
+            grid-area: navbar;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -55,6 +62,13 @@
         }
 
         .hero {
+            display: grid;
+            grid-area: hero;
+            grid-template-columns: minmax(0, 1fr);
+            grid-template-areas:
+                "title"
+                "description"
+                "image";
             padding: 1.5rem 0.75rem;
             text-align: center;
             color: white;
@@ -62,17 +76,20 @@
         }
 
         .hero h1 {
+            grid-area: title;
             max-width: 16rem;
             margin: 0 auto 0.25rem;
             font-size: 1.4rem;
         }
 
         .hero p {
+            grid-area: description;
             margin: 0 0 0.75rem;
             font-size: 0.85rem;
         }
 
         .hero-image {
+            grid-area: image;
             display: block;
             width: 100%;
             max-width: 100%;
@@ -82,8 +99,9 @@
 
         /* Features: CSS Grid */
         .features {
+            grid-area: features;
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: minmax(0, 1fr);
             gap: 0.6rem;
             padding: 0.75rem;
             background-color: white;
@@ -131,19 +149,31 @@
         @media (min-width: 1024px) {
             .page {
                 max-width: 62rem;
+                grid-template-areas:
+                    "navbar"
+                    "hero"
+                    "features";
             }
 
             .hero {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                grid-template-areas:
+                    "title image"
+                    "description image";
+                align-items: center;
+                column-gap: 1.5rem;
                 padding: 2rem;
+                text-align: left;
             }
 
             .hero h1 {
                 max-width: none;
+                margin: 0 0 0.25rem;
                 font-size: 1.8rem;
             }
 
             .hero-image {
-                width: 60%;
+                width: 100%;
                 margin: 0 auto;
             }
 
